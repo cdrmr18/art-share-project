@@ -6,7 +6,7 @@ class ArtistsController < ApplicationController
     def create
         artist = Artist.new(artist_param)
 
-        if artist.save!
+        if artist.save
             render json: artist
         else
             render artist.errors.full_messages
